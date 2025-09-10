@@ -1,0 +1,89 @@
+.buttonA {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+  border: none;
+  color: white;
+  border-radius:1em;
+}
+
+.buttonA:hover{
+    width:300px;
+    height:300px;
+    background-color: red;
+    cursor: pointer;
+
+}
+/*square*/
+.squareA{
+    background-color:rgb(255, 115, 0);
+    border-color:black 2px;
+    width:50px;
+    height:50px;
+    animation:box 5s; /*animation name and duration*/
+    transition: duration 0.4s;
+    transition-delay:0.2s;
+    animation-direction:forwards;
+    animation-iteration-count:2;
+    animation-fill-mode:backwards;
+}
+
+@keyframes box {
+ 0% {top:10px; background:blue; width:300px; height:300px;}   
+ 
+ 100% {top:300px; background:rgb(243, 33, 173); width:500px; height:500px;}
+
+}
+/*styling the brown box*/
+.squareB{
+    width:200px;
+    height:30px;
+    position:relative;
+    background-color: brown;
+    animation:brown-box;
+    animation-duration:5s;
+    transition-delay:0.1s;
+    animation-direction:alternate;
+    animation-fill-mode:backwards;
+    animation-iteration-count: infinite;
+}
+
+@keyframes brown-box{
+    0% {left:0px; background:rgb(73, 18, 223); }
+    100%{left:300px; background:rgb(241, 10, 10); }
+
+}
+.squarec{
+    width:100px;
+    height:100px;
+    background-color:pink;
+}
+
+.modal{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center; 
+}
+
+.modal-content{
+background: #fff;
+padding: 20px;
+border-radius: 10px;
+animation: scaleUp 0.5s ease forwards; 
+}
+
+@keyframes scaleUp {
+  0% { transform: scale(0); opacity: 0; }
+  100% { transform: scale(2); opacity: 1; }
+}
+
+.modal.show {
+  display: flex;
+  
+}
